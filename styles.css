@@ -24,7 +24,38 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
   position:absolute;
+}
+@keyframes xAxis {
+  50% {
+    animation-timing-function: ease-in;
+    transform: translateX(150px);
+  }
+}
+@keyframes yAxis {
+  50% {
+    animation-timing-function: ease-out;
+    transform: translateY(-100px);
+  }
+}
+@keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(359deg);
+  }
+}
+#bowser:hover{
+  transition: transform 2s ease-in-out;
+  transform: scale(2);
+}
+#luigi{
+  height: 200px;
+  animation: yAxis .5s infinite ease-out;
+}
+#yoshi{
+  height: 200px;
+  animation: xAxis 6s infinite ease-out, rotation 1s;
+
 }

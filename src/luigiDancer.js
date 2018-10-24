@@ -18,15 +18,16 @@
 //   return blinkyDancer;
 // };
 
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
+var makeLuigiDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node = this.$node.prepend('<img id="luigi" src="images/luigi.gif" />');
 };
 
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
+makeLuigiDancer.prototype = Object.create(makeDancer.prototype);
 
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+makeLuigiDancer.prototype.constructor = makeLuigiDancer;
 
-makeBlinkyDancer.prototype.step = function() {
+makeLuigiDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
   makeDancer.prototype.step.call(this);
   // oldStep();
