@@ -29,7 +29,7 @@ body, a:link, a:visited, a:active{
 @keyframes xAxis {
   50% {
     animation-timing-function: ease-in;
-    transform: translateX(150px);
+    transform: translateX(75px);
   }
 }
 @keyframes yAxis {
@@ -52,7 +52,7 @@ body, a:link, a:visited, a:active{
 }
 #luigi{
   height: 200px;
-  animation: yAxis .5s infinite ease-out;
+  animation: yAxis 0.75s infinite ease-out;
 }
 #yoshi{
   height: 200px;
