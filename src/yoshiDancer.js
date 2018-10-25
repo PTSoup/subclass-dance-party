@@ -20,7 +20,7 @@
 
 var makeYoshiDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = this.$node.prepend('<img id="yoshi" src="images/yoshi.gif" />');
+  this.$node = this.$node.prepend('<img class="yoshi" src="images/yoshi.gif" />');
 };
 
 makeYoshiDancer.prototype = Object.create(makeDancer.prototype);

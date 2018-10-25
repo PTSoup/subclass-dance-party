@@ -20,7 +20,7 @@
 
 var makeLuigiDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = this.$node.prepend('<img id="luigi" src="images/luigi.gif" />');
+  this.$node = this.$node.prepend('<img class="luigi" src="images/luigi.gif" />');
 };
 
 makeLuigiDancer.prototype = Object.create(makeDancer.prototype);
