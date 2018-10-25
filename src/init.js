@@ -9,6 +9,27 @@ $(document).ready(function() {
     $('.dancer').css('top', '300px');
   });
 
+  $('.princess').on('click', function(event) {
+    var peach = new makePeachDancer(
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
+      Math.random() * 10000
+    );
+    $('body').append(peach.$node);//value **2
+
+    var peachPosition = $('.peach').position();
+
+    var peachAbsolute = Math.pow(peachPosition.left, 2) + Math.pow(peachPosition.top, 2);
+
+    // $('.bowser').each(function(index) {
+    //   var bowserPosition = this.position();
+    //   var bowserAbsolute = Math.pow(this.left, 2) + Math.pow(this.top, 2);
+    //   //absolute difference of bowserAb - peachAb
+    //   //find the smallest
+    //   //change left and top to princess position
+
+  });
+
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
@@ -30,6 +51,7 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
+
     var dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
@@ -38,4 +60,3 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
 });
-
