@@ -46,16 +46,26 @@ body, a:link, a:visited, a:active{
       -webkit-transform: rotate(359deg);
   }
 }
-#bowser:hover{
+.bowser{
+  padding: 50px;
+}
+.bowser:hover{
   transition: transform 2s ease-in-out;
   transform: scale(2);
 }
-#luigi{
+.luigi{
   height: 200px;
+  padding: 10px;
   animation: yAxis 0.75s infinite ease-out;
 }
-#yoshi{
+.yoshi{
   height: 200px;
   animation: xAxis 6s infinite ease-out, rotation 1s;
+}
+.peach{
+  height: 200px;
+  padding: 20px;
+}
+.peach:hover{
 
 }
