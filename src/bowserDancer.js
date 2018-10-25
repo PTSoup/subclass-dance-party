@@ -21,7 +21,7 @@
 var makeBowserDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   //this.$node = this.$node.addClass("bowser");
-  this.$node = this.$node.prepend('<img id="bowser" src="images/bowser.gif" />');
+  this.$node = this.$node.prepend('<img class="bowser" src="images/bowser.gif" />');
 };
 
 makeBowserDancer.prototype = Object.create(makeDancer.prototype);
