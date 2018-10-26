@@ -9,10 +9,15 @@
     <script src="src/luigiDancer.js"></script>
     <script src="src/yoshiDancer.js"></script>
     <script src="src/peachDancer.js"></script>
+
   </head>
   <body>
     <div class="topbar">
-      <span class="title">object dance party</span>
+        <audio autoplay loop>
+          <source src="mario_music.mp3" type="audio/mp3">
+        </audio>
+
+      <span class="title">Mario Dance Party</span>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBowserDancer">Bowser</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeLuigiDancer">Luigi</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeYoshiDancer">Yoshi</a>

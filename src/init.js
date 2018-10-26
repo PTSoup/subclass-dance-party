@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   $('.princess').on('click', function(event) {
     var peach = new makePeachDancer(300, 300, Math.random() * 10000);
-    $('body').append(peach.$node)
+    $('body').append(peach.$node);
 
     // Find all bowsers in the window.dancers array
 
@@ -22,19 +22,19 @@ $(document).ready(function() {
     });
 
     // // 300, 300
-    for (var i = 0; i < bowsers.length; i+=4) {
+    for (var i = 0; i < bowsers.length; i += 4) {
       bowsers[i].setPosition(250, 400);
-      bowsers[i+1].setPosition(250,0);
-      bowsers[i+2].setPosition(500, 200);
-      bowsers[i+3].setPosition(0, 200);
+      bowsers[i + 1].setPosition(250, 0);
+      bowsers[i + 2].setPosition(500, 200);
+      bowsers[i + 3].setPosition(0, 200);
     }
     //   // move all the bowsers to surround princess peach
 
-    for (var i = 0;i < notBowsers.length;i++) {
-      if(notBowsers[i].dancerPosition.left < 500) {
+    for (var i = 0; i < notBowsers.length; i++) {
+      if (notBowsers[i].dancerPosition.left < 500) {
         notBowsers[i].setPosition(
           $('body').height() * (Math.random(),
-        ($('body').width() + 500)));
+          ($('body').width() + 500)));
       }
     }
 
@@ -55,6 +55,8 @@ $(document).ready(function() {
      * A new object of the given type will be created and added
      * to the stage.
      */
+    
+
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
