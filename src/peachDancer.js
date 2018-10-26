@@ -20,7 +20,7 @@
 
 var makePeachDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  //this.$node = this.$node.addClass("bowser");
+  this.dancerName = 'Peach';
   this.$node = this.$node.prepend('<img class="peach" src="images/peach.gif" />');
 };
 

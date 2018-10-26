@@ -20,6 +20,7 @@
 
 var makeYoshiDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.dancerName = 'Yoshi';
   this.$node = this.$node.prepend('<img class="yoshi" src="images/yoshi.gif" />');
 };
 

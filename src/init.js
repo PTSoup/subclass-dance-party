@@ -1,7 +1,5 @@
 $(document).ready(function() {
   window.dancers = [];
-  //<span></span>
-  //element.display.left/top
   $('.lineUp').on('click', function(event) {
     $('.dancer').css('left', function(index) {
       return index * 120;
@@ -10,23 +8,36 @@ $(document).ready(function() {
   });
 
   $('.princess').on('click', function(event) {
-    // var peach = new makePeachDancer(
-    //   $('body').height() * Math.random(),
-    //   $('body').width() * Math.random(),
-    //   Math.random() * 10000
-    // );
-    //$('body').append(peach.$node);//value **2
+    var peach = new makePeachDancer(300, 300, Math.random() * 10000);
+    $('body').append(peach.$node)
 
-    // var peachPosition = $('.peach').position();
+    // Find all bowsers in the window.dancers array
 
-    // var peachAbsolute = Math.pow(peachPosition.left, 2) + Math.pow(peachPosition.top, 2);
+    var bowsers = window.dancers.filter(function(character) {
+      return character.dancerName.includes('Bowser');
+    });
 
-    // $('.bowser').each(function(index) {
-    //   var bowserPosition = this.position();
-    //   var bowserAbsolute = Math.pow(this.left, 2) + Math.pow(this.top, 2);
-    //   //absolute difference of bowserAb - peachAb
-    //   //find the smallest
-    //   //change left and top to princess position
+    var notBowsers = window.dancers.filter(function(character) {
+      return !character.dancerName.includes('Bowser');
+    });
+
+    // // 300, 300
+    for (var i = 0; i < bowsers.length; i+=4) {
+      bowsers[i].setPosition(250, 400);
+      bowsers[i+1].setPosition(250,0);
+      bowsers[i+2].setPosition(500, 200);
+      bowsers[i+3].setPosition(0, 200);
+    }
+    //   // move all the bowsers to surround princess peach
+
+    for (var i = 0;i < notBowsers.length;i++) {
+      if(notBowsers[i].dancerPosition.left < 500) {
+        notBowsers[i].setPosition(
+          $('body').height() * (Math.random(),
+        ($('body').width() + 500)));
+      }
+    }
+
 
   });
 
